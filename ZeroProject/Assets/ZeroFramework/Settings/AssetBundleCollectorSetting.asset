@@ -1,0 +1,224 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 185f6993d5150494d98da50e26cb1c25, type: 3}
+  m_Name: AssetBundleCollectorSetting
+  m_EditorClassIdentifier: 
+  ShowPackageView: 0
+  ShowEditorAlias: 0
+  UniqueBundleName: 0
+  Packages:
+  - PackageName: DefaultPackage
+    PackageDesc: 
+    EnableAddressable: 0
+    LocationToLower: 0
+    IncludeAssetGUID: 0
+    IgnoreDefaultType: 1
+    AutoCollectShaders: 1
+    Groups:
+    - GroupName: Actors
+      GroupDesc: "\u89D2\u8272"
+      AssetTags: Actors
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/PackResources/Actors/Anim
+        CollectorGUID: 3bf13e7d70a65564580561820259a55a
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+      - CollectPath: Assets/PackResources/Actors/Mesh
+        CollectorGUID: 1992112d455f7e04a83a0dec3e48b095
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+      - CollectPath: Assets/PackResources/Actors/Prefab
+        CollectorGUID: a4320e1ea1b8c7243abe4c70cbacc61b
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackSeparately
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+    - GroupName: Audios
+      GroupDesc: "\u97F3\u4E50"
+      AssetTags: Audios
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/PackResources/Audios
+        CollectorGUID: ba1ede9853406f84ebbd8f6492244bfb
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+    - GroupName: Configs
+      GroupDesc: "\u914D\u7F6E"
+      AssetTags: Configs
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/PackResources/Configs
+        CollectorGUID: f773aa92a1eec764b8c18866fc8bd9d0
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+    - GroupName: DLL
+      GroupDesc: "\u4EE3\u7801"
+      AssetTags: DLL
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/PackResources/DLL
+        CollectorGUID: e65785241d9d22f48ade91cb7b42f58a
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+    - GroupName: Effects
+      GroupDesc: "\u7279\u6548"
+      AssetTags: Effects
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/PackResources/Effects
+        CollectorGUID: dfcfdd18b48a8a6409d96c8dd5e508c2
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+    - GroupName: Fonts
+      GroupDesc: "\u5B57\u4F53"
+      AssetTags: Fonts
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/PackResources/Fonts
+        CollectorGUID: 0090fddc6e3568244b59d2dee763c4a6
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+    - GroupName: Materials
+      GroupDesc: "\u6750\u8D28"
+      AssetTags: Materials
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/PackResources/Materials
+        CollectorGUID: d35d5cbebc9b1a745aa96f2e2623a7ab
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+    - GroupName: Other
+      GroupDesc: "\u5176\u4ED6"
+      AssetTags: Other
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/PackResources/Other
+        CollectorGUID: 7e04580875ab60040b0cd8f49fdf9c98
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+    - GroupName: Scenes
+      GroupDesc: "\u573A\u666F"
+      AssetTags: Scenes
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/PackResources/Scenes
+        CollectorGUID: 2c2b358ab7a67e540a705773aaa65b7e
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackSeparately
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+    - GroupName: Shaders
+      GroupDesc: "\u7740\u8272\u5668"
+      AssetTags: Shaders
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/PackResources/Shaders
+        CollectorGUID: 906b37c24fe38854aa6c3f0cf4a9fd16
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackSeparately
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+    - GroupName: Textures
+      GroupDesc: "\u7EB9\u7406"
+      AssetTags: Textures
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/PackResources/Textures
+        CollectorGUID: ea53402a31f33d04fb4d89297b802fcc
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+    - GroupName: UI
+      GroupDesc: "UI\u9762\u677F"
+      AssetTags: UI
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/PackResources/UI
+        CollectorGUID: a72b453528c0cc3448b4cbb7656f57a9
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackSeparately
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+    - GroupName: UIRaw
+      GroupDesc: "UI\u56FE\u7247"
+      AssetTags: UIRaw
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/PackResources/UIRaw
+        CollectorGUID: 8288fc63d10252c478bdc7d285464661
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+    - GroupName: Media
+      GroupDesc: "\u5A92\u4F53"
+      AssetTags: Media
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/PackResources/Media
+        CollectorGUID: fcc8bfdd86df1f3448c7c939038570af
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackSeparately
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
