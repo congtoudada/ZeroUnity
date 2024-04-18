@@ -1,0 +1,16 @@
+
+ZeroProject/UserSettings/Layouts/default-2021.dwlt
+ZeroProject/UserSettings/Search.settings
+
+#Luban
+Tools/Luban/
+Tools/Luban.ClientServer/
+Configs/.cache.meta
+GenerateDatas/
+
+#FileServer
+Tools/FileServer/AssetRoot
+
+ZeroProject/ProjectSettings/CommonBurstAotSettings.json
+ZeroProject/ProjectSettings/BurstAotSettings_StandaloneWindows.json
+Designer/*
