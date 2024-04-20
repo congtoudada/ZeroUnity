@@ -1,3 +1,14 @@
 {
-	"name": "ZeroFramework.Editor"
+    "name": "ZeroFramework.Editor",
+    "rootNamespace": "ZeroFramework.Editor",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

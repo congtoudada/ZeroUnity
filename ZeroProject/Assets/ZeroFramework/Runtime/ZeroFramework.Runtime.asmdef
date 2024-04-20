@@ -1,3 +1,14 @@
 {
-	"name": "ZeroFramework.Runtime"
+    "name": "ZeroFramework.Runtime",
+    "rootNamespace": "ZeroFramework.Runtime",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
