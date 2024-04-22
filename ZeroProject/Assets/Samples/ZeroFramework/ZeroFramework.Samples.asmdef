@@ -1,0 +1,16 @@
+{
+    "name": "ZeroFramework.Samples",
+    "rootNamespace": "",
+    "references": [
+        "GUID:95c0cb1a6e02b5a4b96d23dc3845acc9"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
