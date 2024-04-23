@@ -1,9 +1,8 @@
 {
-    "name": "ZeroFramework.Samples",
-    "rootNamespace": "",
+    "name": "ZeroFramework",
+    "rootNamespace": "ZeroFramework",
     "references": [
-        "GUID:7f3f23437c5fb6a43b60bb539c32f3d3",
-        "GUID:95c0cb1a6e02b5a4b96d23dc3845acc9"
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

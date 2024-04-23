@@ -10,7 +10,7 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
-using ZeroFramework.Runtime;
+using ZeroFramework;
 
 namespace ZeroFramework.Samples
 {
