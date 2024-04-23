@@ -13,7 +13,7 @@ namespace ZeroFramework
     /// <summary>
     /// 游戏框架模块Behaviour管理系统接口
     /// </summary>
-    interface IModuleBehaviourSystem
+    public interface IModuleBehaviourSystem
     {
         /// <summary>
         /// 获取游戏框架模块。
@@ -35,13 +35,7 @@ namespace ZeroFramework
         /// <param name="typeName">要获取的游戏框架模块类型名称。</param>
         /// <returns>要获取的游戏框架模块。</returns>
         ModuleBehaviour GetModule(string typeName);
-
-        /// <summary>
-        /// 关闭游戏框架。
-        /// </summary>
-        /// <param name="shutdownType">关闭游戏框架类型。</param>
-        void Shutdown(ShutdownType shutdownType);
-
+        
         /// <summary>
         /// 注册游戏框架模块。
         /// </summary>

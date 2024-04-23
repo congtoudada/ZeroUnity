@@ -10,7 +10,7 @@ using System;
 
 namespace ZeroFramework
 {
-    interface IGameEvent
+    public interface IGameEvent
     {
         #region 细分注册接口
         /// <summary>

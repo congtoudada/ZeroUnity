@@ -15,7 +15,7 @@ namespace ZeroFramework
 {
     public class SingletonMono<T> : MonoBehaviour where T : SingletonMono<T>
     {
-        private static T _instance;
+        protected static T _instance;
         public static T Instance => _instance;
         
         private static int _initCount = 0;
@@ -78,8 +78,10 @@ namespace ZeroFramework
                     }
                 }
             }
+
             _instance = this as T;
             DontDestroyOnLoad(gameObject);
+            OnSingletonInit();
         }
     }
 }

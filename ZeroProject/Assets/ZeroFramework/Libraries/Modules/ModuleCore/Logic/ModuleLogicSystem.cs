@@ -58,7 +58,7 @@ namespace ZeroFramework
         /// <summary>
         /// 关闭并清理所有游戏框架模块。
         /// </summary>
-        public void Shutdown()
+        internal void Shutdown()
         {
             Log.Info("关闭ModuleLogicSystem...");
             for (LinkedListNode<ModuleLogic> current = _modules.Last; current != null; current = current.Previous)

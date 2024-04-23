@@ -81,7 +81,7 @@ namespace ZeroFramework
                     mem = new T();
                     _addMemoryCount++;
                 }
-                mem.OnGet();
+                // mem.OnGet();
                 return mem;
             }
             
@@ -107,7 +107,7 @@ namespace ZeroFramework
                     mem = (IMemory)Activator.CreateInstance(_memoryType);
                     _addMemoryCount++;
                 }
-                mem.OnGet();
+                // mem.OnGet();
                 return mem;
             }
             
@@ -118,7 +118,7 @@ namespace ZeroFramework
             /// <exception cref="Exception"></exception>
             public void Release(IMemory memory)
             {
-                memory.OnRelease();
+                memory.Clear();
                 lock (_memories)
                 {
                     if (Instance._enableStrictCheck && _memories.Contains(memory))

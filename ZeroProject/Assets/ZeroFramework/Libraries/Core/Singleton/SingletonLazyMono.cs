@@ -21,7 +21,7 @@ namespace ZeroFramework
         /// <summary>
         /// 静态实例
         /// </summary>
-        private static T _instance;
+        protected static T _instance;
 
         /// <summary>
         /// 静态属性：封装相关实例对象

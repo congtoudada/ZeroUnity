@@ -8,26 +8,21 @@
 
 namespace ZeroFramework
 {
-   interface IModuleLogicSystem
+    public interface IModuleLogicSystem
     {
-        /// <summary>
-        /// 所有游戏框架模块轮询。
-        /// </summary>
-        /// <param name="elapseSeconds">逻辑流逝时间，以秒为单位。</param>
-        /// <param name="realElapseSeconds">真实流逝时间，以秒为单位。</param>
-       void Update(float elapseSeconds, float realElapseSeconds);
+       /// <summary>
+       /// 所有游戏框架模块轮询。
+       /// </summary>
+       /// <param name="elapseSeconds">逻辑流逝时间，以秒为单位。</param>
+       /// <param name="realElapseSeconds">真实流逝时间，以秒为单位。</param>
+      void Update(float elapseSeconds, float realElapseSeconds);
 
-        /// <summary>
-        /// 关闭并清理所有游戏框架模块。
-        /// </summary>
-       void Shutdown();
-
-        /// <summary>
-        /// 获取游戏框架模块。
-        /// </summary>
-        /// <typeparam name="T">要获取的游戏框架模块类型。</typeparam>
-        /// <returns>要获取的游戏框架模块。</returns>
-        /// <remarks>如果要获取的游戏框架模块不存在，则自动创建该游戏框架模块。</remarks>
-       T GetModule<T>() where T : class;
+       /// <summary>
+       /// 获取游戏框架模块。
+       /// </summary>
+       /// <typeparam name="T">要获取的游戏框架模块类型。</typeparam>
+       /// <returns>要获取的游戏框架模块。</returns>
+       /// <remarks>如果要获取的游戏框架模块不存在，则自动创建该游戏框架模块。</remarks>
+      T GetModule<T>() where T : class;
     }
 }

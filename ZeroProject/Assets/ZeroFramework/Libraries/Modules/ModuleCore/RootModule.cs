@@ -161,10 +161,10 @@ namespace ZeroFramework
             StopAllCoroutines();
         }
         
-        private void OnDestroy()
-        {
-            ModuleLogicSystem.Instance.Shutdown();
-        }
+        // private void OnDestroy()
+        // {
+        //     ModuleLogicSystem.Instance.Shutdown();
+        // }
         
         /// <summary>
         /// 暂停游戏。
@@ -206,10 +206,10 @@ namespace ZeroFramework
             GameSpeed = 1f;
         }
         
-        internal void Shutdown()
-        {
-            Destroy(gameObject);
-        }
+        // internal void Shutdown()
+        // {
+        //     Destroy(gameObject);
+        // }
         
         private void InitTextHelper()
         {

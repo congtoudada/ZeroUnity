@@ -16,14 +16,11 @@ namespace ZeroFramework
   /// </summary>
   public interface IMemory
   {
-    /// <summary>
-    /// 从内存池获取对象时调用
-    /// </summary>
-    void OnGet();
+    //void OnGet();
     
     /// <summary>
     /// 清理内存对象回收入池时调用
     /// </summary>
-    void OnRelease();
+    void Clear();
   }
 }

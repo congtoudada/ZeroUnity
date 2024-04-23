@@ -85,19 +85,19 @@ namespace ZeroFramework
         /// 关闭游戏框架。
         /// </summary>
         /// <param name="shutdownType">关闭游戏框架类型。</param>
-        public void Shutdown(ShutdownType shutdownType)
+        internal void Shutdown(ShutdownType shutdownType)
         {
-            Log.Info("Shutdown Game Framework ({0})...", shutdownType);
+            Log.Info("关闭ModuleBehaviourSystem Mode:({0})...", shutdownType);
             Utility.Unity.Shutdown();
-            RootModule rootModule = GetModule<RootModule>();
-            if (rootModule != null)
-            {
-                rootModule.Shutdown();
-                rootModule = null;
-            }
+            // RootModule rootModule = GetModule<RootModule>();
+            // if (rootModule != null)
+            // {
+            //     rootModule.Shutdown();
+            //     rootModule = null;
+            // }
             _modules.Clear();
 
-            GameModule.Instance.Shutdown(shutdownType);
+            // GameModule.Instance.Shutdown(shutdownType);
             
             if (shutdownType == ShutdownType.None)
             {

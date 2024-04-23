@@ -14,16 +14,9 @@ namespace ZeroFramework
     public abstract class MemoryObject : IMemory
     {
         /// <summary>
-        /// 从内存池获取对象时调用
-        /// </summary>
-        public virtual void OnGet()
-        {
-        }
-
-        /// <summary>
         /// 清理内存对象回收入池。
         /// </summary>
-        public virtual void OnRelease()
+        public virtual void Clear()
         {
         }
     }

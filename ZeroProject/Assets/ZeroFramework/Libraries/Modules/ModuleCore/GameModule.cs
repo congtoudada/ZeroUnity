@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 
 namespace ZeroFramework
@@ -17,12 +18,16 @@ namespace ZeroFramework
     /// <summary>
     /// 游戏模块。
     /// </summary>
-    public partial class GameModule : SingletonMono<GameModule>
+    public partial class GameModule : Singleton<GameModule>
     {
-        private readonly Dictionary<Type, ModuleBehaviour> _moduleMaps = new Dictionary<Type, ModuleBehaviour>(ModuleLogicSystem.DesignModuleCount);
+        private Dictionary<Type, ModuleBehaviour> _moduleMaps = new Dictionary<Type, ModuleBehaviour>(ModuleLogicSystem.DesignModuleCount);
 
         private GameObject _gameModuleRoot;
         
+        private GameModule()
+        {
+        }
+
         #region 框架模块
 
         /// <summary>
@@ -33,8 +38,14 @@ namespace ZeroFramework
             get => _root ??= Get<RootModule>();
             private set => _root = value;
         }
-
+        public IObjectPoolManager ObjectPool
+        {
+            get => _objectPool ??= Get<ObjectPoolModule>();
+            private set => _objectPool = value;
+        }
+        
         private RootModule _root;
+        private IObjectPoolManager _objectPool;
         #endregion
         
         /// <summary>
@@ -60,7 +71,7 @@ namespace ZeroFramework
             return module;
         }
 
-        private void Start()
+        public void Init(GameObject gameObject)
         {
             Log.Info("GameModule Active");
             gameObject.name = $"[{nameof(GameModule)}]";
@@ -71,9 +82,11 @@ namespace ZeroFramework
         public void Shutdown(ShutdownType shutdownType)
         {
             Log.Info("GameModule Shutdown");
+            ModuleLogicSystem.Instance.Shutdown();
+            ModuleBehaviourSystem.Instance.Shutdown(shutdownType);
             if (_gameModuleRoot != null)
             {
-                Destroy(_gameModuleRoot);
+                Object.Destroy(_gameModuleRoot);
                 _gameModuleRoot = null;
             }
             _moduleMaps.Clear();
@@ -91,6 +104,8 @@ namespace ZeroFramework
             // _scene = null;
             // _timer = null;
             // _resourceExt = null;
+
+            _instance = null;
         }
     }
 }

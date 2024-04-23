@@ -97,29 +97,28 @@ namespace ZeroFramework
         /// 返回循环访问集合的枚举数。
         /// </summary>
         /// <returns>循环访问集合的枚举数。</returns>
-        IEnumerator<T> IEnumerable<T>.GetEnumerator()
+        public Enumerator GetEnumerator()
         {
-            return GetEnumerator();
+            return new Enumerator(this);
         }
-        
+
         /// <summary>
         /// 返回循环访问集合的枚举数。
         /// </summary>
         /// <returns>循环访问集合的枚举数。</returns>
-        public IEnumerator<T> GetEnumerator()
+        IEnumerator<T> IEnumerable<T>.GetEnumerator()
         {
             return GetEnumerator();
         }
-        
+
         /// <summary>
         /// 返回循环访问集合的枚举数。
         /// </summary>
         /// <returns>循环访问集合的枚举数。</returns>
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return new Enumerator(this);
+            return GetEnumerator();
         }
-
         
         /// <summary>
         /// 循环访问集合的枚举数。

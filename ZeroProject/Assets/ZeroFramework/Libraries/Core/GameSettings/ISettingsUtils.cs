@@ -11,7 +11,7 @@ using System.Collections.Generic;
 
 namespace ZeroFramework
 {
-    interface ISettingsUtils
+    public interface ISettingsUtils
     {
         /// <summary>
         /// Zero全局配置
