@@ -1,0 +1,17 @@
+/****************************************************
+  文件：#SCRIPTNAME#.cs
+  作者：聪头
+  邮箱：1322080797@qq.com
+  日期：DateTime
+  功能：
+*****************************************************/
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+#ROOTNAMESPACEBEGIN#
+    public interface #SCRIPTNAME#
+    {
+        #NOTRIM#
+    }
+#ROOTNAMESPACEEND#
