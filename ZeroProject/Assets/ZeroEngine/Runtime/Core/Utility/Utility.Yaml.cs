@@ -35,7 +35,24 @@ namespace ZeroEngine
             /// <returns>序列化后的 Yaml 字符串。</returns>
             public static string ToYaml(object obj)
             {
-                return _yamlHelper.ToYaml(obj);
+                if (_yamlHelper == null)
+                {
+                    throw new GameFrameworkException("YAML helper is invalid.");
+                }
+                
+                try
+                {
+                    return _yamlHelper.ToYaml(obj);
+                }
+                catch (Exception exception)
+                {
+                    if (exception is GameFrameworkException)
+                    {
+                        throw;
+                    }
+                    throw new GameFrameworkException(Text.Format("Can not convert to YAML with exception '{0}'.", exception), exception);
+                }
+
             }
     
             /// <summary>
@@ -46,7 +63,24 @@ namespace ZeroEngine
             /// <returns>反序列化后的对象。</returns>
             public static T ToObject<T>(string yaml)
             {
-                return _yamlHelper.ToObject<T>(yaml);
+                if (_yamlHelper == null)
+                {
+                    throw new GameFrameworkException("YAML helper is invalid.");
+                }
+
+                try
+                {
+                    return _yamlHelper.ToObject<T>(yaml);
+                }
+                catch (Exception exception)
+                {
+                    if (exception is GameFrameworkException)
+                    {
+                        throw;
+                    }
+
+                    throw new GameFrameworkException(Text.Format("Can not convert to object with exception '{0}'.", exception), exception);
+                }
             }
     
             /// <summary>
@@ -57,7 +91,29 @@ namespace ZeroEngine
             /// <returns>反序列化后的对象。</returns>
             public static object ToObject(Type objectType, string yaml)
             {
-                return _yamlHelper.ToObject(objectType, yaml);
+                if (_yamlHelper == null)
+                {
+                    throw new GameFrameworkException("YAML helper is invalid.");
+                }
+
+                if (objectType == null)
+                {
+                    throw new GameFrameworkException("Object type is invalid.");
+                }
+
+                try
+                {
+                    return _yamlHelper.ToObject(objectType, yaml);
+                }
+                catch (Exception exception)
+                {
+                    if (exception is GameFrameworkException)
+                    {
+                        throw;
+                    }
+
+                    throw new GameFrameworkException(Text.Format("Can not convert to object with exception '{0}'.", exception), exception);
+                }
             }
     
             /// <summary>
