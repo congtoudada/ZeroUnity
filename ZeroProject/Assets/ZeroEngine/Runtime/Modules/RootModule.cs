@@ -313,7 +313,7 @@ namespace ZeroEngine
             {
                 objectPoolModule.ReleaseAllUnused();
             }
-
+            
             ResourceModule resourceModule = ModuleSystem.GetModule<ResourceModule>();
             if (resourceModule != null)
             {
