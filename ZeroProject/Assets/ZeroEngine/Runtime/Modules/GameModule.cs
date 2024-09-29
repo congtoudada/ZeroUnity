@@ -61,21 +61,21 @@ namespace ZeroEngine
         // public static ProcedureModule Procedure => _procedure ??= Get<ProcedureModule>();
         //
         // private static ProcedureModule _procedure;
-        //
-        // /// <summary>
-        // /// 获取对象池模块。
-        // /// </summary>
-        // public static ObjectPoolModule ObjectPool => _objectPool ??= Get<ObjectPoolModule>();
-        //
-        // private static ObjectPoolModule _objectPool;
-        //
-        // /// <summary>
-        // /// 获取资源模块。
-        // /// </summary>
-        // public static ResourceModule Resource => _resource ??= Get<ResourceModule>();
-        //
-        // private static ResourceModule _resource;
-        //
+        
+        /// <summary>
+        /// 获取对象池模块。
+        /// </summary>
+        public static ObjectPoolModule ObjectPool => _objectPool ??= Get<ObjectPoolModule>();
+        
+        private static ObjectPoolModule _objectPool;
+        
+        /// <summary>
+        /// 获取资源模块。
+        /// </summary>
+        public static ResourceModule Resource => _resource ??= Get<ResourceModule>();
+        
+        private static ResourceModule _resource;
+        
         // /// <summary>
         // /// 获取音频模块。
         // /// </summary>
@@ -117,13 +117,13 @@ namespace ZeroEngine
         // public static TimerModule Timer => _timer ??= Get<TimerModule>();
         //
         // private static TimerModule _timer;
-        //
-        // /// <summary>
-        // /// 资源组件拓展。
-        // /// </summary>
-        // public static ResourceExtComponent ResourceExt => _resourceExt ??= Get<ResourceExtComponent>();
-        //
-        // private static ResourceExtComponent _resourceExt;
+        
+        /// <summary>
+        /// 资源组件拓展。
+        /// </summary>
+        public static ResourceExtComponent ResourceExt => _resourceExt ??= Get<ResourceExtComponent>();
+        
+        private static ResourceExtComponent _resourceExt;
         #endregion
 
         /// <summary>
