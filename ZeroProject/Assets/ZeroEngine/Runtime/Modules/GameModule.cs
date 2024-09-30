@@ -110,13 +110,13 @@ namespace ZeroEngine
         // public static SceneModule Scene => _scene ??= Get<SceneModule>();
         //
         // private static SceneModule _scene;
-        //
-        // /// <summary>
-        // /// 获取计时器模块。
-        // /// </summary>
-        // public static TimerModule Timer => _timer ??= Get<TimerModule>();
-        //
-        // private static TimerModule _timer;
+        
+        /// <summary>
+        /// 获取计时器模块。
+        /// </summary>
+        public static TimerModule Timer => _timer ??= Get<TimerModule>();
+        
+        private static TimerModule _timer;
         
         /// <summary>
         /// 资源组件拓展。
