@@ -37,6 +37,8 @@ namespace ZeroEngine
         /// <returns>创建的辅助器。</returns>
         public static T CreateHelper<T>(string helperTypeName, T customHelper, int index) where T : MonoBehaviour
         {
+            //如果helperTypeName非空，从字符串创建helper
+            //如果helperTypeName为空，且customHelper非空，则说明已经存在于场景内，直接从场景内获取
             T helper = null;
             if (!string.IsNullOrEmpty(helperTypeName))
             {

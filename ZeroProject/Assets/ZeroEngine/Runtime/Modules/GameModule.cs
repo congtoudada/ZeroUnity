@@ -36,17 +36,16 @@ namespace ZeroEngine
 
         private static RootModule _root;
 
-        // /// <summary>
-        // /// 获取调试模块。
-        // /// </summary>
-        // public static DebuggerModule Debugger
-        // {
-        //     get => _debugger ??= Get<DebuggerModule>();
-        //     private set => _debugger = value;
-        // }
-        //
-        //
-        // private static DebuggerModule _debugger;
+        /// <summary>
+        /// 获取调试模块。
+        /// </summary>
+        public static DebuggerModule Debugger
+        {
+            get => _debugger ??= Get<DebuggerModule>();
+            private set => _debugger = value;
+        }
+        
+        private static DebuggerModule _debugger;
         //
         // /// <summary>
         // /// 获取有限状态机模块。
@@ -82,20 +81,20 @@ namespace ZeroEngine
         // public static AudioModule Audio => _audio ??= Get<AudioModule>();
         //
         // private static AudioModule _audio;
-        //
-        // /// <summary>
-        // /// 获取配置模块。
-        // /// </summary>
-        // public static SettingModule Setting => _setting ??= Get<SettingModule>();
-        //
-        // private static SettingModule _setting;
-        //
-        // /// <summary>
-        // /// 获取UI模块。
-        // /// </summary>
-        // public static UIModule UI => _ui ??= Get<UIModule>();
-        //
-        // private static UIModule _ui;
+        
+        /// <summary>
+        /// 获取配置模块。
+        /// </summary>
+        public static SettingModule Setting => _setting ??= Get<SettingModule>();
+        
+        private static SettingModule _setting;
+        
+        /// <summary>
+        /// 获取UI模块。
+        /// </summary>
+        public static UIModule UI => _ui ??= Get<UIModule>();
+        
+        private static UIModule _ui;
         //
         // /// <summary>
         // /// 获取多语言模块。
