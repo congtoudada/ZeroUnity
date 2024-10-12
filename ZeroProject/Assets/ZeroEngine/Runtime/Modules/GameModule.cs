@@ -46,13 +46,13 @@ namespace ZeroEngine
         }
         
         private static DebuggerModule _debugger;
-        //
-        // /// <summary>
-        // /// 获取有限状态机模块。
-        // /// </summary>
-        // public static FsmModule Fsm => _fsm ??= Get<FsmModule>();
-        //
-        // private static FsmModule _fsm;
+        
+        /// <summary>
+        /// 获取有限状态机模块。
+        /// </summary>
+        public static FsmModule Fsm => _fsm ??= Get<FsmModule>();
+        
+        private static FsmModule _fsm;
         //
         // /// <summary>
         // /// 流程管理模块。
