@@ -102,13 +102,13 @@ namespace ZeroEngine
         // public static LocalizationModule Localization => _localization ??= Get<LocalizationModule>();
         //
         // private static LocalizationModule _localization;
-        //
-        // /// <summary>
-        // /// 获取场景模块。
-        // /// </summary>
-        // public static SceneModule Scene => _scene ??= Get<SceneModule>();
-        //
-        // private static SceneModule _scene;
+        
+        /// <summary>
+        /// 获取场景模块。
+        /// </summary>
+        public static SceneModule Scene => _scene ??= Get<SceneModule>();
+        
+        private static SceneModule _scene;
         
         /// <summary>
         /// 获取计时器模块。
