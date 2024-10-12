@@ -75,12 +75,12 @@ namespace ZeroEngine
         
         private static ResourceModule _resource;
         
-        // /// <summary>
-        // /// 获取音频模块。
-        // /// </summary>
-        // public static AudioModule Audio => _audio ??= Get<AudioModule>();
-        //
-        // private static AudioModule _audio;
+        /// <summary>
+        /// 获取音频模块。
+        /// </summary>
+        public static AudioModule Audio => _audio ??= Get<AudioModule>();
+        
+        private static AudioModule _audio;
         
         /// <summary>
         /// 获取配置模块。
