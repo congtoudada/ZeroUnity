@@ -53,13 +53,13 @@ namespace ZeroEngine
         public static FsmModule Fsm => _fsm ??= Get<FsmModule>();
         
         private static FsmModule _fsm;
-        //
-        // /// <summary>
-        // /// 流程管理模块。
-        // /// </summary>
-        // public static ProcedureModule Procedure => _procedure ??= Get<ProcedureModule>();
-        //
-        // private static ProcedureModule _procedure;
+        
+        /// <summary>
+        /// 流程管理模块。
+        /// </summary>
+        public static ProcedureModule Procedure => _procedure ??= Get<ProcedureModule>();
+        
+        private static ProcedureModule _procedure;
         
         /// <summary>
         /// 获取对象池模块。
@@ -169,7 +169,7 @@ namespace ZeroEngine
             _root = null;
             _debugger = null;
             _fsm = null;
-            // _procedure = null;
+            _procedure = null;
             _objectPool = null;
             _resource = null;
             _audio = null;
