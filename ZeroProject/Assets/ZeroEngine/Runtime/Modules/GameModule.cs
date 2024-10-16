@@ -95,13 +95,13 @@ namespace ZeroEngine
         public static UIModule UI => _ui ??= Get<UIModule>();
         
         private static UIModule _ui;
-        //
-        // /// <summary>
-        // /// 获取多语言模块。
-        // /// </summary>
-        // public static LocalizationModule Localization => _localization ??= Get<LocalizationModule>();
-        //
-        // private static LocalizationModule _localization;
+        
+        /// <summary>
+        /// 获取多语言模块。
+        /// </summary>
+        public static LocalizationModule Localization => _localization ??= Get<LocalizationModule>();
+        
+        private static LocalizationModule _localization;
         
         /// <summary>
         /// 获取场景模块。
@@ -167,18 +167,18 @@ namespace ZeroEngine
             _moduleMaps.Clear();
             
             _root = null;
-            // _debugger = null;
-            // _fsm = null;
+            _debugger = null;
+            _fsm = null;
             // _procedure = null;
-            // _objectPool = null;
-            // _resource = null;
-            // _audio = null;
-            // _setting = null;
-            // _ui = null;
-            // _localization = null;
-            // _scene = null;
-            // _timer = null;
-            // _resourceExt = null;
+            _objectPool = null;
+            _resource = null;
+            _audio = null;
+            _setting = null;
+            _ui = null;
+            _localization = null;
+            _scene = null;
+            _timer = null;
+            _resourceExt = null;
         }
 
         #region HandlePlayModeStateChanged
