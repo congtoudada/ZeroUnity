@@ -1,17 +1,16 @@
 ﻿/****************************************************
-  文件：ELanguage.cs
+  文件：Language.cs
   作者：聪头
   邮箱：1322080797@qq.com
-  日期：2024年08月23日 12:16:14
+  日期：2024年10月16日 15:19:19
   功能：
 *****************************************************/
-
 namespace ZeroEngine
 {
     /// <summary>
     /// 本地化语言。
     /// </summary>
-    public enum ELanguage : byte
+    public enum Language : byte
     {
         /// <summary>
         /// 未指定。

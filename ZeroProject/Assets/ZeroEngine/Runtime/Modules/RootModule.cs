@@ -22,7 +22,7 @@ namespace ZeroEngine
         private float m_GameSpeedBeforePause = 1f;
 
         [SerializeField]
-        private ELanguage m_EditorLanguage = ELanguage.Unspecified;
+        private Language m_EditorLanguage = Language.Unspecified;
 
         [SerializeField]
         private string m_TextHelperTypeName = "TEngine.DefaultTextHelper";
@@ -51,7 +51,7 @@ namespace ZeroEngine
         /// <summary>
         /// 获取或设置编辑器语言（仅编辑器内有效）。
         /// </summary>
-        public ELanguage EditorLanguage
+        public Language EditorLanguage
         {
             get => m_EditorLanguage;
             set => m_EditorLanguage = value;
