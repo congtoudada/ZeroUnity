@@ -104,15 +104,13 @@ namespace ZeroEngine
             {
                 if (_allEventListenerMap.TryGetValue(eventId, out var listListener))
                 {
-                    for (int i = 0; i < listListener.Count; i++)
+                    for (int i = listListener.Count - 1; i >= 0 ; i--)
                     {
                         if (listListener[i].IsDeleted)
                         {
                             Log.Info("remove delay delete eventId[{0}]", eventId);
-                            listListener[i] = listListener[^1];
-                            EventRegInfo.Release(listListener[^1]);
-                            listListener.RemoveAt(listListener.Count - 1);
-                            i--;
+                            EventRegInfo.Release(listListener[i]);
+                            listListener.RemoveAt(i);
                         }
                     }
                 }
@@ -472,7 +470,7 @@ namespace ZeroEngine
                 bool isProcessing = _processEventList.Contains(eventId);
                 bool delayDeleted = false;
 
-                for (int i = 0; i < list.Count; i++)
+                for (int i = list.Count - 1; i >= 0 ; i--)
                 {
                     var regInfo = list[i];
                     if (regInfo.Owner == owner)
@@ -484,10 +482,8 @@ namespace ZeroEngine
                         }
                         else
                         {
-                            list[i] = list[^1];
-                            EventRegInfo.Release(list[^1]);
-                            list.RemoveAt(list.Count - 1);
-                            i--;
+                            EventRegInfo.Release(list[i]);
+                            list.RemoveAt(i);
                         }
                     }
                 }
