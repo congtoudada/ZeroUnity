@@ -25,16 +25,16 @@ namespace ZeroEngine
         private Language m_EditorLanguage = Language.Unspecified;
 
         [SerializeField]
-        private string m_TextHelperTypeName = "TEngine.DefaultTextHelper";
+        private string m_TextHelperTypeName = "ZeroEngine.DefaultTextHelper";
 
         [SerializeField]
-        private string m_VersionHelperTypeName = "TEngine.DefaultVersionHelper";
+        private string m_VersionHelperTypeName = "ZeroEngine.DefaultVersionHelper";
 
         [SerializeField]
-        private string m_LogHelperTypeName = "TEngine.DefaultLogHelper";
+        private string m_LogHelperTypeName = "ZeroEngine.DefaultLogHelper";
 
         [SerializeField]
-        private string m_JsonHelperTypeName = "TEngine.DefaultJsonHelper";
+        private string m_JsonHelperTypeName = "ZeroEngine.DefaultJsonHelper";
 
         [SerializeField]
         private int m_FrameRate = 120;
@@ -117,7 +117,7 @@ namespace ZeroEngine
             InitTextHelper();
             InitVersionHelper();
             InitLogHelper();
-            Log.Info("TEngine Version: {0}", Version.GameFrameworkVersion);
+            Log.Info("ZeroEngine Version: {0}", Version.GameFrameworkVersion);
             Log.Info("Game Version: {0} ({1})", Version.GameVersion, Version.InternalGameVersion);
             Log.Info("Unity Version: {0}", Application.unityVersion);
 

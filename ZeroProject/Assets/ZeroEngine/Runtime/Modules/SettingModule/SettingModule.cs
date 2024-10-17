@@ -21,7 +21,7 @@ namespace ZeroEngine
         private ISettingManager m_SettingManager = null;
 
         [SerializeField]
-        private string m_SettingHelperTypeName = "TEngine.DefaultSettingHelper";
+        private string m_SettingHelperTypeName = "ZeroEngine.DefaultSettingHelper";
 
         [SerializeField]
         private SettingHelperBase m_CustomSettingHelper = null;

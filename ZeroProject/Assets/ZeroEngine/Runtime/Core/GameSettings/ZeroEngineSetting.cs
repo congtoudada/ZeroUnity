@@ -10,7 +10,7 @@ using UnityEngine;
 
 namespace ZeroEngine
 {
-  [CreateAssetMenu(fileName = "TEngineGlobalSettings", menuName = "TEngine/TEngineSettings")]
+  [CreateAssetMenu(fileName = "ZeroEngineGlobalSettings", menuName = "ZeroEngine/ZeroEngineSettings")]
 
   public class ZeroEngineSettings : ScriptableObject
   {

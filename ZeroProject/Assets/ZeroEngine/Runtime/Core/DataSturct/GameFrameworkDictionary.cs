@@ -69,7 +69,7 @@ namespace ZeroEngine
             }
         }
 
-        /// <summary>Removes all keys and values from the <see cref="T:TEngine.GameFrameworkDictionary`2" />.</summary>
+        /// <summary>Removes all keys and values from the <see cref="T:ZeroEngine.GameFrameworkDictionary`2" />.</summary>
         public void Clear()
         {
             KeyList.Clear();

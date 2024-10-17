@@ -90,7 +90,7 @@ namespace ZeroEngine.Localization
             var sbTerms = new StringBuilder();
             sbTrans.AppendLine( "using UnityEngine;" );
             sbTrans.AppendLine();
-            sbTrans.AppendLine( "namespace TEngine.Localization" );
+            sbTrans.AppendLine( "namespace ZeroEngine.Localization" );
             sbTrans.AppendLine( "{" );
             sbTrans.AppendLine( "	public static class ScriptLocalization" );
             sbTrans.AppendLine( "	{" );

@@ -265,7 +265,7 @@ namespace ZeroEngine
 
             if (m_ShowFullWindow)
             {
-                m_WindowRect = GUILayout.Window(0, m_WindowRect, DrawWindow, "<b>TENGINE DEBUGGER</b>");
+                m_WindowRect = GUILayout.Window(0, m_WindowRect, DrawWindow, "<b>ZEROENGINE DEBUGGER</b>");
             }
             else
             {

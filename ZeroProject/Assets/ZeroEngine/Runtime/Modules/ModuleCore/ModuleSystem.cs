@@ -125,7 +125,7 @@ namespace ZeroEngine
         {
             if (module == null)
             {
-                Log.Error("TEngine Module is invalid.");
+                Log.Error("ZeroEngine Module is invalid.");
                 return;
             }
 
