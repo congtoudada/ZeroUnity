@@ -133,8 +133,6 @@ namespace ZeroEngine
             HasOverrideUpdate = false;
         }
         
-        
-
         internal void CallDestroy()
         {
             OnDestroy();
@@ -145,7 +143,7 @@ namespace ZeroEngine
         /// </summary>
         protected virtual void OnDestroy()
         {
-            RemoveAllUIEvent();
+
         }
         
         internal void CallSortDepth(int depth)

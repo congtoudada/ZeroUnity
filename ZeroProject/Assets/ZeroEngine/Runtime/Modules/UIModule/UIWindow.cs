@@ -459,8 +459,8 @@ namespace ZeroEngine
             for (int i = 0; i < ListChild.Count; i++)
             {
                 var uiChild = ListChild[i];
-                uiChild.CallDestroy();
-                uiChild.OnDestroyWidget();
+                uiChild.CallDestroy();  //调用虚函数销毁
+                uiChild.OnDestroyWidget();  //调用固定销毁代码
             }
 
             // 注销回调函数

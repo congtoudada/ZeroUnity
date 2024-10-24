@@ -329,8 +329,8 @@ namespace ZeroEngine
 
             foreach (var uiChild in ListChild)
             {
-                uiChild.OnDestroy();
-                uiChild.OnDestroyWidget();
+                uiChild.OnDestroy();  //调用虚函数销毁
+                uiChild.OnDestroyWidget();  //调用固定销毁代码
             }
 
             if (gameObject != null)
