@@ -47,4 +47,17 @@ public class ConfigSystem : Singleton<ConfigSystem>
         GameModule.Resource.UnloadAsset(textAsset);
         return new ByteBuf(bytes);
     }
+    
+    /// <summary>
+    /// 加载json配置
+    /// </summary>
+    /// <param name="file"></param>
+    /// <returns></returns>
+    private JSONNode LoadJson(string file)
+    {
+        TextAsset textAsset = GameModule.Resource.LoadAsset<TextAsset>(file);
+        string json = textAsset.text;
+        GameModule.Resource.UnloadAsset(textAsset);
+        return JSON.Parse(json);
+    }
 }
