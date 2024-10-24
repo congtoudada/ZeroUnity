@@ -399,8 +399,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9bf3e05d23e45b288d23f64445e78d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  availableProcedureTypeNames: []
-  entranceProcedureTypeName: 
+  availableProcedureTypeNames:
+  - GameMain.ProcedureClearCache
+  - GameMain.ProcedureCreateDownloader
+  - GameMain.ProcedureDownloadFile
+  - GameMain.ProcedureDownloadOver
+  - GameMain.ProcedureInitPackage
+  - GameMain.ProcedureInitResources
+  - GameMain.ProcedureLaunch
+  - GameMain.ProcedureLoadAssembly
+  - GameMain.ProcedurePreload
+  - GameMain.ProcedureSplash
+  - GameMain.ProcedureStartGame
+  - GameMain.ProcedureUpdateManifest
+  - GameMain.ProcedureUpdateVersion
+  entranceProcedureTypeName: GameMain.ProcedureLaunch
 --- !u!1 &709048974
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,7 +524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 501d182ee62343948ebdc71867485cea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Skin: {fileID: 0}
+  m_Skin: {fileID: 11400000, guid: eaeb7c9008064519bdccb581c981fab3, type: 2}
   m_ActiveWindow: 0
   m_ShowFullWindow: 0
   m_ConsoleWindow:
@@ -625,7 +638,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AudioMixer: {fileID: 0}
   m_InstanceRoot: {fileID: 0}
-  m_AudioGroupConfigs: []
+  m_AudioGroupConfigs:
+  - m_Name: Music
+    m_Mute: 0
+    m_Volume: 0.5
+    m_AgentHelperCount: 1
+    AudioType: 2
+    audioRolloffMode: 1
+    minDistance: 15
+    maxDistance: 50
+  - m_Name: Sound
+    m_Mute: 0
+    m_Volume: 0.5
+    m_AgentHelperCount: 4
+    AudioType: 0
+    audioRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+  - m_Name: UISound
+    m_Mute: 0
+    m_Volume: 0.5
+    m_AgentHelperCount: 4
+    AudioType: 1
+    audioRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+  - m_Name: Voice
+    m_Mute: 0
+    m_Volume: 0.5
+    m_AgentHelperCount: 1
+    AudioType: 3
+    audioRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
 --- !u!1 &914171637
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,10 +762,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fff536e0305a440ca16db701f1f4a770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InstanceRoot: {fileID: 0}
+  m_InstanceRoot: {fileID: 553327091}
   m_dontDestroyUIRoot: 1
   m_enableErrorLog: 1
-  m_UICamera: {fileID: 0}
+  m_UICamera: {fileID: 1874900758}
 --- !u!1 &965975540
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,7 +925,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1047779123}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfc34c9132d650b499fc6f146e1e11f6, type: 3}
+  m_Script: {fileID: 11500000, guid: f4d6a977c90343de944d74191f07edf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1174611474
@@ -1094,7 +1139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4bbd3917b974fd3a1966f1b363c78c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EnableStrictCheck: 0
+  m_EnableStrictCheck: 2
 --- !u!1 &1874900756
 GameObject:
   m_ObjectHideFlags: 0
@@ -1188,7 +1233,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2073039845}
   - component: {fileID: 2073039847}
-  - component: {fileID: 2073039846}
+  - component: {fileID: 2073039848}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1211,26 +1256,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1174611475}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2073039846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2073039844}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
 --- !u!114 &2073039847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1246,6 +1271,36 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!114 &2073039848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073039844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
